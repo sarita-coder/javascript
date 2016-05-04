@@ -4,8 +4,15 @@ function ejercicio5(){
 	var num=cadena.length;
 	var k=0;
 	for (var i = 0; i < num; i++) {
-		k=( cadena[i] === cadena[num-1-i] ) ? +1 :k;
+		if(cadena[i] == cadena[num-1-i]){
+			k++;
+		}
+		//k=( cadena[i] == cadena[num-1-i] ) ? +1 : k ; 
 	}
-	return ((k+1) === num ? "Es palindromo" : "No es un palindromo");
+	return (k == num ? "Es palindromo" : "No es un palindromo");
 }
 alert(ejercicio5());
+
+
+
+
